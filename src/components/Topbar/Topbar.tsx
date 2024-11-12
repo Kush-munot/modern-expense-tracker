@@ -2,7 +2,7 @@
 import React from 'react'
 import { Alert, IconButton, Snackbar, Stack } from '@mui/material';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import { addIconButton, amtTextField, buttonStyle, CustomFormControl, CustomFormControlRadio, style, topbarStack } from './styles';
+import { addIconButton, amtTextField, buttonStyle, CustomFormControl, CustomFormControlRadio, style, title, topbarStack } from './styles';
 import { Box, Button, FormControlLabel, FormLabel, InputLabel, MenuItem, Modal, Radio, RadioGroup, Select, SelectChangeEvent, TextField, Typography } from '@mui/material'
 import Slide, { SlideProps } from '@mui/material/Slide';
 
@@ -156,7 +156,7 @@ const Topbar: React.FC<AddTransactionProps> = ({ onTransactionAdded }) => {
   return (
     <div>
       <Stack direction="row" sx={topbarStack}>
-        <h1>Kush&apos;s Expense Tracker Dashboard</h1>
+        <Typography variant="h4" sx={title}>Kush&apos;s Expense Tracker Dashboard</Typography>
         <IconButton aria-label="add" sx={addIconButton} onClick={handleOpen}>
           <AddCircleIcon />
         </IconButton>

@@ -2,6 +2,8 @@
 import Topbar from "@/components/Topbar/Topbar";
 import "./page.css";
 import React from "react";
+import BalanceGrid from "@/components/BalanceGrid/BalanceGrid";
+
 
 
 
@@ -9,7 +11,7 @@ export default function Home() {
   const [sheetData, setSheetData] = React.useState([]);
 
   const handleAddTransaction = async () => {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? ''; 
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? '';
     try {
       const response = await fetch(apiUrl);
 
@@ -18,14 +20,21 @@ export default function Home() {
       }
       const data = await response.json();
       setSheetData(data)
+      console.log(sheetData);
     } catch (error) {
       console.log('Error:', error);
     }
   };
 
+  React.useEffect(() => {
+    handleAddTransaction();
+  }, []);
+
+
   return (
     <div className="page">
       <Topbar onTransactionAdded={handleAddTransaction} />
+      <BalanceGrid allTransactions={sheetData} />
     </div>
   );
 }

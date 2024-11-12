@@ -1,3 +1,4 @@
+import { Padding } from "@mui/icons-material";
 import { FormControl } from "@mui/material";
 import styled from "styled-components";
 
@@ -30,6 +31,13 @@ export const style = {
     color: '#f2f2f2',
     p: 4,
 };
+
+export const title = {
+    padding: '0 16px',
+    "@media (max-width:540px)": {
+        fontSize:'1.3rem'
+    },
+}
 
 export const CustomFormControl = styled(FormControl)({
     '& .MuiInputLabel-root': {
