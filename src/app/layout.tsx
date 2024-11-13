@@ -19,6 +19,20 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+
+        <link
+          rel="icon"
+          href="public/android-chrome-192x192.png"
+          type="image/png"
+          sizes="192x192"
+        />
+        <link
+          rel="icon"
+          href="public/android-chrome-512x512.png"
+          type="image/png"
+          sizes="512x512"
+        />
+
       </head>
       <body>
         {children}

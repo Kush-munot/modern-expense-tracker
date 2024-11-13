@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { Card, CardContent, Grid, Typography } from '@mui/material'
 import React from 'react'
 import { PieChart, Pie, Cell, Legend, BarChart, CartesianGrid, XAxis, YAxis, Bar, Tooltip, Rectangle } from "recharts";
@@ -126,7 +126,7 @@ const Chart = (props: { allTransactions: apiData[]; }) => {
         setSubCategoryData(subCategoryArray);
 
         console.log(categoryData);
-    }, [categoryData, props.allTransactions]);
+    }, [props.allTransactions]);
     
     return (
         <div>
