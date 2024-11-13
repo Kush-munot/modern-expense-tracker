@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { Card, CardContent, Grid, Typography } from '@mui/material'
 import React from 'react'
