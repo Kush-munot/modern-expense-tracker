@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { Box, Typography, Card as MuiCard, CardContent as MuiCardContent, SxProps, Theme, Icon } from '@mui/material';
+import { Box, Typography, Card as MuiCard, CardContent as MuiCardContent, SxProps, Theme } from '@mui/material';
 import { SvgIconComponent } from '@mui/icons-material';
-import { cardIcon } from './styles.ts';
+import { cardIcon } from './styles';
 
 export type CardProps = {
   label: string;

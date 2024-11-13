@@ -1,8 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client"
 import Topbar from "@/components/Topbar/Topbar";
 import "./page.css";
 import React from "react";
 import BalanceGrid from "@/components/BalanceGrid/BalanceGrid";
+import TransactionAndAnalytics from "@/components/TransactionAnd Analytics/Analytics";
 
 
 
@@ -35,6 +37,7 @@ export default function Home() {
     <div className="page">
       <Topbar onTransactionAdded={handleAddTransaction} />
       <BalanceGrid allTransactions={sheetData} />
+      <TransactionAndAnalytics allTransactions={sheetData}/>
     </div>
   );
 }
