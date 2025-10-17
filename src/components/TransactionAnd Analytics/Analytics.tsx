@@ -4,7 +4,6 @@ import React from 'react'
 import AnalyticsSummary from '../Analytics/AnalyticsSummary'
 import SpendingPatterns from '../Analytics/SpendingPatterns'
 import BudgetRecommendations from '../Analytics/BudgetRecommendations'
-import RecentTransactions from '../Analytics/RecentTransactions'
 import QuickStats from '../Analytics/QuickStats'
 
 const TransactionAndAnalytics = (props: any) => {
@@ -12,9 +11,6 @@ const TransactionAndAnalytics = (props: any) => {
         <Box>
             {/* Enhanced Analytics Dashboard */}
             <AnalyticsSummary transactions={props.allTransactions} />
-            
-            {/* Recent Transactions
-            <RecentTransactions transactions={props.allTransactions} /> */}
 
             {/* Quick Transaction Stats */}
             <QuickStats transactions={props.allTransactions} />
