@@ -1,34 +1,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Card, CardContent, Grid } from '@mui/material'
+import { Box } from '@mui/material'
 import React from 'react'
-import Chart from '../BarChart/Chart'
-import Transaction from './Transaction'
-import { cardStyles1 } from '../BarChart/styles'
+import AnalyticsSummary from '../Analytics/AnalyticsSummary'
+import SpendingPatterns from '../Analytics/SpendingPatterns'
+import BudgetRecommendations from '../Analytics/BudgetRecommendations'
+import RecentTransactions from '../Analytics/RecentTransactions'
+import QuickStats from '../Analytics/QuickStats'
 
 const TransactionAndAnalytics = (props: any) => {
     return (
-        <div>
-            <Grid container spacing={4}>
-                {/* The Grid items will stack in one column on small screens and switch to two columns on larger screens */}
-                <Grid item xs={12} lg={6}>
-                    <Card sx={cardStyles1}>
-                        <CardContent>
-                            {(props.allTransactions).slice().reverse().map((d: any, index: number) => (
-                                <Transaction
-                                    key={index}
-                                    name={d.Message}
-                                    email={d.ModeOfPayment}
-                                    saleAmount={d.Amount}
-                                />
-                            ))}
-                        </CardContent>
-                    </Card>
-                </Grid>
-                <Grid item xs={12} lg={6}>
-                    <Chart allTransactions={props.allTransactions} />
-                </Grid>
-            </Grid>
-        </div>
+        <Box>
+            {/* Enhanced Analytics Dashboard */}
+            <AnalyticsSummary transactions={props.allTransactions} />
+            
+            {/* Recent Transactions
+            <RecentTransactions transactions={props.allTransactions} /> */}
+
+            {/* Quick Transaction Stats */}
+            <QuickStats transactions={props.allTransactions} />
+            
+            
+            {/* Spending Patterns Analysis */}
+            <SpendingPatterns transactions={props.allTransactions} />
+            
+            {/* Budget Recommendations */}
+            <BudgetRecommendations transactions={props.allTransactions} />
+        </Box>
     )
 }
 
