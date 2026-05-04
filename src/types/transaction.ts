@@ -12,4 +12,4 @@ export interface TransactionData {
 }
 
 // Shared constants
-export const BASE_MONTHLY_INCOME = 81000;
+export const BASE_MONTHLY_INCOME = 89000;
