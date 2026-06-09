@@ -4,7 +4,8 @@ import styled from "styled-components";
 export const topbarStack = {
     display: "flex",
     justifyContent: "space-between",
-    color: '#f2f2f2'
+    color: '#f2f2f2',
+    alignItems: 'center',
 }
 
 export const addIconButton = {
@@ -35,6 +36,119 @@ export const title = {
     padding: '0 16px',
     "@media (max-width:540px)": {
         fontSize:'1.3rem'
+    },
+}
+
+export const quickAddCard = {
+    backgroundColor: '#1c1917',
+    border: '1px solid #292524',
+    borderRadius: '20px',
+    padding: '1rem',
+    marginTop: '1rem',
+}
+
+export const quickAddRow = {
+    display: 'grid',
+    gridTemplateColumns: 'minmax(0, 1fr) 150px 56px 160px',
+    gap: '0.75rem',
+    alignItems: 'center',
+    "@media (max-width:900px)": {
+        gridTemplateColumns: 'minmax(0, 1fr) 130px 56px 140px',
+    },
+    "@media (max-width:540px)": {
+        gridTemplateColumns: 'minmax(0, 1fr) 72px',
+    },
+}
+
+export const quickAddMeta = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '0.5rem',
+    marginTop: '0.75rem',
+    alignItems: 'center',
+}
+
+export const quickAddActions = {
+    display: 'flex',
+    gap: '0.75rem',
+    justifyContent: 'flex-end',
+    "@media (max-width:540px)": {
+        justifyContent: 'stretch',
+        flexDirection: 'column',
+    },
+}
+
+export const templateSection = {
+    marginTop: '1rem',
+    paddingTop: '1rem',
+    borderTop: '1px solid #292524',
+}
+
+export const templateList = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '0.75rem',
+    marginTop: '0.75rem',
+}
+
+export const templateCard = {
+    backgroundColor: '#0c0a09',
+    border: '1px solid #292524',
+    borderRadius: '16px',
+    padding: '0.75rem',
+    minWidth: '220px',
+    flex: '1 1 220px',
+}
+
+export const templateCardActions = {
+    display: 'flex',
+    gap: '0.5rem',
+    marginTop: '0.75rem',
+    flexWrap: 'wrap',
+}
+
+export const modalActions = {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gap: '0.75rem',
+    marginTop: '1.25rem',
+    alignItems: 'stretch',
+    "@media (max-width:540px)": {
+        gridTemplateColumns: '1fr',
+    },
+}
+
+export const modalPrimaryButton = {
+    background: '#22c55e',
+    color: '#052e16',
+    fontWeight: 700,
+    minHeight: '56px',
+    borderRadius: '18px',
+    padding: '0.85rem 1rem',
+    textTransform: 'none',
+    fontSize: '0.98rem',
+    lineHeight: 1.2,
+    boxShadow: 'none',
+    '&:hover': {
+        background: '#16a34a',
+        boxShadow: 'none',
+    },
+}
+
+export const modalSecondaryButton = {
+    minHeight: '56px',
+    borderRadius: '18px',
+    padding: '0.85rem 1rem',
+    textTransform: 'none',
+    fontWeight: 600,
+    fontSize: '0.98rem',
+    lineHeight: 1.2,
+    color: '#f2f2f2',
+    borderColor: '#3f3f46',
+    backgroundColor: '#0c0a09',
+    '&:hover': {
+        borderColor: '#22c55e',
+        backgroundColor: '#18181b',
     },
 }
 

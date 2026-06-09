@@ -15,7 +15,10 @@ const RecentTransactions: React.FC<RecentTransactionsProps> = ({ transactions })
     backgroundColor: "#1c1917",
     color: "#f2f2f2",
     borderRadius: '15px',
-    height: '500px',
+    height: {
+      xs: '420px',
+      md: '500px',
+    },
     overflowY: 'scroll',
     "&::-webkit-scrollbar": {
       display: "none"
@@ -60,7 +63,14 @@ const RecentTransactions: React.FC<RecentTransactionsProps> = ({ transactions })
                   sx={{
                     display: 'flex',
                     justifyContent: 'space-between',
-                    alignItems: 'center',
+                    alignItems: {
+                      xs: 'flex-start',
+                      sm: 'center',
+                    },
+                    flexDirection: {
+                      xs: 'column',
+                      sm: 'row',
+                    },
                     padding: 2,
                     marginBottom: 1,
                     backgroundColor: '#2a2a2a', // Distinct background color for each transaction
@@ -132,7 +142,7 @@ const RecentTransactions: React.FC<RecentTransactionsProps> = ({ transactions })
                   </Box>
                   
                   {/* Right Section - Amount */}
-                  <Box sx={{ textAlign: 'right', minWidth: '120px' }}>
+                  <Box sx={{ textAlign: { xs: 'left', sm: 'right' }, minWidth: { sm: '120px' }, marginTop: { xs: 1.25, sm: 0 } }}>
                     <Typography 
                       variant="h5" 
                       fontWeight="bold"

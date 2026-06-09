@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <div className="page">
-      <Topbar onTransactionAdded={handleAddTransaction} />
+      <Topbar onTransactionAdded={handleAddTransaction} transactions={sheetData} />
       <TransactionAndAnalytics allTransactions={sheetData}/>
     </div>
   );
