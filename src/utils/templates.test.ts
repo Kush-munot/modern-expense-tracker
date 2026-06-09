@@ -6,7 +6,7 @@ import {
   buildManualTemplate,
   deriveSuggestedTemplates,
   normalizeTemplateName,
-} from './templates.ts';
+} from './templates';
 
 test('normalizeTemplateName trims extra whitespace', () => {
   assert.equal(normalizeTemplateName('  Bus   to   PG  '), 'Bus to PG');

@@ -6,7 +6,7 @@ import {
   analyzeCycleChanges,
   getCycleBounds,
   getTransactionsForCycle,
-} from './cycleAnalysis.ts';
+} from './cycleAnalysis';
 
 test('getCycleBounds returns a 15th-to-14th cycle for a mid-cycle date', () => {
   const cycle = getCycleBounds(new Date('2026-06-08T00:00:00Z'));

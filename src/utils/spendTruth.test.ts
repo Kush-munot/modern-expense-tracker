@@ -5,7 +5,7 @@ import type { TransactionData } from '../types/transaction';
 import {
   classifySpendTruthLane,
   summarizeSpendTruth,
-} from './spendTruth.ts';
+} from './spendTruth';
 
 test('classifySpendTruthLane maps utilities to fixed commitments and investments to investments', () => {
   const fixedTransaction: TransactionData = {

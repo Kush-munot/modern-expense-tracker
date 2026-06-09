@@ -4,7 +4,7 @@ import {
   summarizeBudgetRecommendations,
   summarizeQuickStats,
   summarizeSpendingPatterns,
-} from './dashboardDisclosure.ts';
+} from './dashboardDisclosure';
 import type { TransactionData } from '../types/transaction';
 
 function transaction(input: Partial<TransactionData>): TransactionData {

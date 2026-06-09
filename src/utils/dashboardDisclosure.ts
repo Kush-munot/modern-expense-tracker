@@ -1,5 +1,5 @@
-import type { TransactionData } from '../types/transaction.ts';
-import { BASE_MONTHLY_INCOME } from '../types/transaction.ts';
+import type { TransactionData } from '../types/transaction';
+import { BASE_MONTHLY_INCOME } from '../types/transaction';
 
 export interface DisclosureSummaryItem {
   label: string;
@@ -74,18 +74,18 @@ export function summarizeBudgetRecommendations(transactions: TransactionData[]):
   const needsPercentage =
     totalIncome > 0
       ? (expenses
-          .filter((transaction) => transaction.SalaryBifercationCat === 'Needs')
-          .reduce((sum, transaction) => sum + transaction.Effective, 0) /
-          totalIncome) *
-        100
+        .filter((transaction) => transaction.SalaryBifercationCat === 'Needs')
+        .reduce((sum, transaction) => sum + transaction.Effective, 0) /
+        totalIncome) *
+      100
       : 0;
   const wantsPercentage =
     totalIncome > 0
       ? (expenses
-          .filter((transaction) => transaction.SalaryBifercationCat === 'Wants')
-          .reduce((sum, transaction) => sum + transaction.Effective, 0) /
-          totalIncome) *
-        100
+        .filter((transaction) => transaction.SalaryBifercationCat === 'Wants')
+        .reduce((sum, transaction) => sum + transaction.Effective, 0) /
+        totalIncome) *
+      100
       : 0;
 
   let alertCount = 0;

@@ -5,7 +5,7 @@ import {
   buildQuickAddDraft,
   inferQuickAddSuggestions,
   parseQuickAddInput,
-} from './quickAdd.ts';
+} from './quickAdd';
 import type { TransactionData } from '../types/transaction';
 
 test('parseQuickAddInput extracts amount, note, and payment alias from shorthand', () => {
